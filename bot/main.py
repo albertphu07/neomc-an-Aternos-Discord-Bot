@@ -27,7 +27,7 @@ servers = account.list_servers()
 
 if servers:
         server = nodexserver1[0]
-  Bot Started
+#Bot Started
 @bot.event
 async def on_ready():
         print(f"Bot Is Active Users are now permitted to start the server, {bot.user.name}")
