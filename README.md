@@ -13,23 +13,23 @@ Please consider ⭐️ starring  this project if you found it useful
 ## Quick Start (Automatic Installation)
 Run the following command on your desired Server/Computer
 ```bash
-sudo curl -sSL https://raw.githubusercontent.com/albertphu07/Aternos-Discord-Bot/refs/heads/main/install.sh | bash
+sudo curl -sSL https://raw.githubusercontent.com/albertphu07/neomc-an-Aternos-Discord-Bot/refs/heads/main/install.sh | bash
 ```
 
 ## While Installing 
 Go to Bots And Enable the Following
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093002.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093002.png)
 
 Go To OAuth2 And Enable the Following
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093218.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093218.png)
 
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093348.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093348.png)
 
 Copy The link Add And your Bot to your server
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093601.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093601.png)
 
 Go to Bots and Reset Your Token (You will need this in a bit)
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20134821.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20134821.png)
 
 ## Follow On Screen Instructions
 
@@ -41,7 +41,7 @@ neomc -start
 ## Quick Start (Manual Installation)
 Clone The github Repo Using your desired Server/Computer
 ```bash
-https://github.com/albertphu07/Aternos-Discord-Bot.git
+https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot.git
 ```
 Install python3 and run:
 
@@ -62,18 +62,18 @@ Then Set Up a Discord Bot Using the Link
 https://discord.com/developers/applications
 ```
 Go to Bots And Enable the Following
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093002.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093002.png)
 
 Go To OAuth2 And Enable the Following
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093218.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093218.png)
 
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093348.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093348.png)
 
 Copy The link Add And your Bot to your server
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093601.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093601.png)
 
 Go to Bots and Reset Your Token (You will need this in a bit)
-![479shots_so](https://github.com/albertphu07/Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20134821.png)
+![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20134821.png)
 
 Paste Your Token Into .env 
 ```bash
