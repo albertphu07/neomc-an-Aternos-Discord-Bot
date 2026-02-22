@@ -62,7 +62,7 @@ async def stop(ctx):
         server.stop()
 
 @bot.command()
-async def stop(ctx):
+async def restart(ctx):
         await ctx.reply(f"@everyone Server Is Restarting... Server Reset By:{ctx.author.mention}")
         server.stop()
         server.start()
