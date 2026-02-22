@@ -26,7 +26,7 @@ account = client.account
 servers = account.list_servers()
 
 if servers:
-        server = nodexserver1[0]
+        server = servers[0]
 #Bot Started
 @bot.event
 async def on_ready():
