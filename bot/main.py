@@ -57,7 +57,7 @@ async def start(ctx):
 
 @bot.command()
 async def stop(ctx):
-        await ctx.reply(f"@everyone Server Is Stopping... Server Ended by:{ctx.author.mention}")
+        await ctx.reply(f"@everyone Server Is Stopping... Server Suspended by:{ctx.author.mention}")
         server.stop()
 
 @bot.command()
