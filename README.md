@@ -43,7 +43,16 @@ Clone The github Repo Using your desired Server/Computer
 ```bash
 https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot.git
 ```
-Install python3 and run:
+Install python3 and pyenv and run:
+
+```bash
+pyenv install 3.11.9
+```
+Go into your Folder With our Repo and run:
+
+```bash
+pyenv local 3.11.9
+```
 
 ```bash
 python3 -m venv discord 
