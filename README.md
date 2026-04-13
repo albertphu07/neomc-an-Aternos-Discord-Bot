@@ -12,11 +12,18 @@ Please consider ⭐️ starring  this project if you found it useful
 
 ## Quick Start (Automatic Installation)
 Run the following command on your desired Server/Computer
+
+# LINUX
 ```bash
 sudo curl -sSL https://raw.githubusercontent.com/albertphu07/neomc-an-Aternos-Discord-Bot/refs/heads/main/install.sh | bash
 ```
+# WINDOWS
+Download the exe file at the following link and follow the on screen instructions 
+```bash
+https://drive.google.com/file/d/1NDhjyracAbKVhPJPOJL6tLvS8uCqN2FH/view?usp=sharing
+```
 
-## While Installing 
+## While Installing / When on Start Screen (Windows)
 Go to Bots And Enable the Following
 ![479shots_so](https://github.com/albertphu07/neomc-an-Aternos-Discord-Bot/blob/main/readmeimage/Screenshot%202026-02-22%20093002.png)
 
