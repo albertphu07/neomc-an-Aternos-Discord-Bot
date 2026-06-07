@@ -3,38 +3,36 @@ from discord.ext import commands
 import logging
 from dotenv import load_dotenv
 from python_aternos import Client
+from mcstatus import JavaServer
+import sys
 import os
+import asyncio
+import random
 
-#Discord Token
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 
-#Log
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 
-#Discord Bot Prefix
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-
-#Aternos Login Info
 client = Client()
 client.login("YOUR_ATERNOS_USER", "YOUR_ATERNOS_PASSWORD")
 account = client.account
 servers = account.list_servers()
 
-if servers:
-        server = servers[0]
-#Bot Started
+server = servers[0] if servers else None
+
+server_status = JavaServer.lookup("yourserver.aternos.me")
+
 @bot.event
 async def on_ready():
-        print(f"Bot Is Active Users are now permitted to start the server, {bot.user.name}")
-        print("Created By albertphu07 on github | Powered by NodeX")
-  
+    print(f"Bot Is Active Users are now permitted to start the server, {bot.user.name}")
 
-#Prevent People From Asking to Start Server
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
@@ -42,29 +40,46 @@ async def on_message(message):
 
     if "start the server" in message.content.lower():
         await message.delete()
-        await message.channel.send(
-            f"{message.author.mention} Please use `!start` to start the server. "
-        )
+        await message.channel.send(f"{message.author.mention} Please use `!start` to start the server.")
 
     await bot.process_commands(message)
 
-    
-
-#Server Commands For Discord
 @bot.command()
 async def start(ctx):
-        await ctx.reply(f"@everyone Server Will Start in 10 Seconds... Server started by:{ctx.author.mention}")
-        server.start()
+    try:
+        status = await asyncio.to_thread(server_status.status)
+        await ctx.reply(f"Server Is Currently Online With {status.players.online} players.")
+    except Exception:
+        await ctx.reply(f"@everyone Server Is Starting... Server Started by: {ctx.author.mention}")
+        if server:
+            server.start()
 
 @bot.command()
 async def stop(ctx):
-        await ctx.reply(f"@everyone Server Is Stopping... Server Suspended by:{ctx.author.mention}")
+    await ctx.reply(f"@everyone Server Is Stopping... Server Suspended by: {ctx.author.mention}")
+    if server:
         server.stop()
 
 @bot.command()
 async def restart(ctx):
-        await ctx.reply(f"@everyone Server Is Restarting... Server Reset By:{ctx.author.mention}")
+    await ctx.reply(f"@everyone Server Is Restarting... Server Reset By: {ctx.author.mention}")
+    if server:
         server.stop()
+    if server:
         server.start()
+
+@bot.command()
+async def status(ctx):
+    await ctx.reply("Checking server status...")
+    try:
+        status = await asyncio.to_thread(server_status.status)
+        await ctx.reply(f"Server is online with {status.players.online} players.")
+    except Exception:
+        await ctx.reply("Server is Currently Offline, If you would like to start the server please run the !start command")
+
+@bot.command()
+async def shutdown(ctx):
+    await ctx.reply(f"Shutting Down... Killed by {ctx.author.mention}")
+    sys.exit()
 
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
